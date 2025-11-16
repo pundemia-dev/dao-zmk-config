@@ -74,5 +74,59 @@
                         &trans  &trans  &trans  &trans    &trans    &trans
             >;
         };
+
+        Media {
+            bindings = <
+&none  &kp  &kp  &kp  &kp  &kp  &kp         &bt BT_DISC 0     &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
+&kp    &kp  &kp  &kp  &kp  &kp  &kp         &kp K_PREV        &kp C_VOL_DN   &kp C_VOL_UP   &kp K_NEXT     &kp
+&kp    &kp  &kp  &kp  &kp  &kp  &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+                 &kp  &kp  &kp  &kp K_STOP  &kp K_PLAY_PAUSE  &kp K_MUTE
+            >;
+        };
+
+        Nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &key_repeat  &kp K_PASTE  &trans         &trans       &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &caps_word   &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp INSERT   &kp HOME     &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+                        &trans  &trans  &trans  &trans       &trans       &trans
+            >;
+        };
+
+        Mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Sym {
+            bindings = <
+&kp  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE  &kp  &kp  &kp  &kp  &kp  &kp
+&kp  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS         &kp  &kp  &kp  &kp  &kp  &kp
+&kp  &kp TILDE       &kp EXCLAMATION  &kp AT                &kp HASH               &kp PIPE         &kp  &kp  &kp  &kp  &kp  &kp
+                                      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE   &kp  &kp  &kp
+            >;
+        };
+
+        Num {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Fun {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };

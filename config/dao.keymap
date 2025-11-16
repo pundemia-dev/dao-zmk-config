@@ -26,24 +26,34 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        jk-escape {
+            bindings = <&kp ESC>;
+            key-positions = <19 20>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
 &kp TAB                  &kp Q  &kp W  &kp E         &kp R                 &kp T        &kp Y        &kp U           &kp I      &kp O    &kp P     &kp LBKT
-&kp LG(SPACE)            &kp A  &kp S  &kp D         &kp F                 &kp G        &kp H        &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+&kp CAPS                 &kp A  &kp S  &kp D         &kp F                 &kp G        &kp H        &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
 &mt LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C         &kp V                 &kp B        &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
-                                       &kp LEFT_GUI  &mt LSHFT UNDERSCORE  &lt 1 SPACE  &lt 1 ENTER  &mt RSHFT BSPC  &kp DEL
+                                       &kp LEFT_GUI  &mt LSHFT UNDERSCORE  &lt 1 SPACE  &lt 1 ENTER  &mt RSHFT BSPC  &lt 3 DEL
             >;
         };
 
         lower_layer {
             bindings = <
-&kp TILDE  &kp N1     &kp N2    &kp N3       &kp N4       &kp N5     &kp N6    &kp N7    &kp N8   &kp N9     &kp N0        &kp PIPE
-&kp GRAVE  &kp EXCL   &kp AT    &kp HASH     &kp DLLR     &kp PRCNT  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &kp C_VOL_UP  &mt RCTRL DQT
-&kp PSCRN  &kp CARET  &kp AMPS  &kp STAR     &kp PLUS     &kp MINUS  &kp LPAR  &kp RPAR  &kp LT   &kp GT     &kp C_VOL_DN  &kp BSLH
-                                &lt 2 EQUAL  &lt 2 EQUAL  &trans     &trans    &trans    &kp DEL
+&kp TILDE  &kp N1     &kp N2    &kp N3       &kp N4       &kp N5     &kp N7  &kp N8  &kp N9   &kp N9     &kp N0        &kp PIPE
+&kp GRAVE  &kp EXCL   &kp AT    &kp HASH     &kp DLLR     &kp PRCNT  &kp N4  &kp N5  &kp N6   &kp RIGHT  &kp C_VOL_UP  &mt RCTRL DQT
+&kp PSCRN  &kp CARET  &kp AMPS  &kp STAR     &kp PLUS     &kp MINUS  &kp N1  &kp N2  &kp N3   &kp GT     &kp C_VOL_DN  &kp BSLH
+                                &lt 2 EQUAL  &lt 2 EQUAL  &trans     &trans  &kp N0  &kp DEL
             >;
         };
 
@@ -53,6 +63,15 @@
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
 &sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
                                          &trans        &none         &trans        &trans        &none         &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans    &trans
             >;
         };
     };
